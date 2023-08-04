@@ -6,7 +6,7 @@ pipeline {
    
      stage('Install Dependencies') { 
         steps { 
-           sh 'nginx install' 
+           sh 'npm install' 
         }
      }
      
@@ -14,15 +14,15 @@ pipeline {
         steps { 
            sh 'echo "testing application..."'
         }
-      }
+     }
 
-         stage("Deploy application") { 
+     stage("Deploy application") { 
          steps { 
            sh 'echo "deploying application..."'
          }
 
      }
   
-   	}
-
    }
+
+}
